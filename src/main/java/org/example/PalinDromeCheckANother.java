@@ -5,7 +5,7 @@ public class PalinDromeCheckANother {
     public static void main(String[] args) {
 
         PalinDromeCheckANother a=new PalinDromeCheckANother();
-        a.checkPalindrome("soumya");
+        a.checkPalindrome(2.22);
 
     }
 
@@ -16,16 +16,20 @@ public class PalinDromeCheckANother {
         int left=0;
         int right=revVal.length()-1;
 
+        boolean isPalindrome=true;
+
         while(left<right){
             if(revVal.charAt(left)!=revVal.charAt(right)){
-                System.out.println("Not Palindrome");
+                isPalindrome=false;
                 break;
-            }else {
-                System.out.println("Value is Palindrome");
             }
             left++;
             right--;
         }
+            if(isPalindrome){
+                System.out.println("Palindrome");
+            }
+        System.out.println("Not Palindrome");
 
 
     }
